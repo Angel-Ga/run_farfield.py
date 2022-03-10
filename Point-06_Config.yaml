@@ -1,0 +1,52 @@
+sim_name: 'ANG01'
+point:
+  name: 'Coatza01'
+  depth: '400'
+  lon: -94.46 #-94.767358
+  lat: 19.8 #20.040589
+oil:
+  tag: 'heavy' #'medium'
+  origin: "GULF OF MEXICO, USA"
+  name: 'MAYA' #'GENERIC BUNKER C'
+spill:
+  flow_rate: 40.
+  leak_rate: 1.0
+  vertical_angle: 90
+  horizont_angle: 0
+  GOR: 1500.
+  depth: 400.
+  jet_diam: 0.2
+  rel_radius: 1000.0
+  temp: 65.0
+  bins: 12
+model:
+  weathering: 'cicese'
+  log_level: 20
+  fartype: '3D Sim.' #3D Sim.
+  advection_scheme: 'runge-kutta4' # agregado Ang
+cicoil:
+  wind_factor: 0.035
+  sim_len: 1 #4
+  N_parti: 9500
+  step_time: 1.0
+  repo_time: 1.0
+sim:
+  StarTime: 20220223
+  Syear: 2022
+  Smonth: 2
+  Sday: 23
+  Shour: 0
+  Smin: 0
+  EndTime: 20220224
+  Eyear: 2022
+  Emonth: 2
+  Eday: 24
+  Ehour: 21
+  Emin: 0
+datadir: "/media/angeles/ADATA HD770G_GAL/Forecast/forecast_data/"
+#"/home/angeles/Escritorio/tools_opend/TAMOC_input_files/" #fnmoc-amseas/20220220/" 
+#"/raid/driftruns/forecast-runs/data/"
+outdir: "/media/angeles/ADATA HD770G_GAL/Forecast/"
+#"/home/angeles/Escritorio/tools_opend/" 
+# "/home/driftruns/JuanK/"
+
