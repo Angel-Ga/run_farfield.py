@@ -116,11 +116,14 @@ if __name__ == "__main__":
   # Readers
   reader_amseas = reader_netCDF_CF_generic.Reader(filename=PtoParam['datadir'] + 'fnmoc-amseas/' + txtTime[0:8] + '/fnmoc-amseas-forecast-GoM-' + txtTime[0:8] + '-time*.nc', name='amseas_forecast')
   #print(reader_amseas)
+  #reader_hycom = reader_netCDF_CF_generic.Reader(filename=PtoParam['datadir'] + 'hycom/' + 'HYCOM-forecast-GoM-' + txtTime[0:8] + '.nc', name='HYCOM_forecast') #ang
+  #print(reader_hycom)
   reader_gfswinds = reader_netCDF_CF_generic.Reader(filename=PtoParam['datadir'] + 'gfs-winds/' + 'gfs-winds-forecast-GoM-' + txtTime[0:8] + '.nc', name='gfs_forecast')
   #print(reader_gfswinds)
   
   # o.add_reader([reader_basemap, reader_globcurrent, reader_oceanwind])
-  o.add_reader([reader_amseas, reader_gfswinds])
+  o.add_reader([eval(PtoParam['model']['reader_current']),eval(PtoParam['model']['reader_winds'])]) #ang
+  #o.add_reader([reader_amseas, reader_gfswinds])
   o.set_oiltype(oil_name)
 
   
