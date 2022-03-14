@@ -24,23 +24,25 @@ model:
   log_level: 20
   fartype: '3D Sim.' #3D Sim.
   advection_scheme: 'runge-kutta4' # agregado Ang
+  reader_current: 'reader_amseas'  # 'reader_amseas' o 'reader_hycom'<---modelos de corrientes disponibless
+  reader_winds: 'reader_gfswinds'
 cicoil:
   wind_factor: 0.035
-  sim_len: 1 #4
+  sim_len: 4
   N_parti: 9500
   step_time: 1.0
   repo_time: 1.0
 sim:
-  StarTime: 20220223
+  StarTime: 20220225
   Syear: 2022
   Smonth: 2
-  Sday: 23
+  Sday: 25
   Shour: 0
   Smin: 0
-  EndTime: 20220224
+  EndTime: 20220228
   Eyear: 2022
   Emonth: 2
-  Eday: 24
+  Eday: 28
   Ehour: 21
   Emin: 0
 datadir: "/media/angeles/ADATA HD770G_GAL/Forecast/forecast_data/"
